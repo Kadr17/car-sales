@@ -1,19 +1,20 @@
-/* Барлық беттер үшін негізгі стильдер */
+/* Жалпы стильдер */
 body {
-    background-image: url("images/background.jpg"); /* Артқы фон */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url("images/car-background.jpg"); /* Фон */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white; /* Ақ текст */
+    text-align: center; /* Барлық текст ортасына тураланады */
 }
 
-/* Навигация */
-nav {
-    background: rgba(0, 0, 0, 0.8); /* Навигацияға мөлдір қара фон */
-    padding: 10px 0;
+/* Шапка (header) */
+header {
+    background: rgba(0, 0, 0, 0.7); /* Қараңғылау */
+    padding: 15px;
     text-align: center;
 }
 
@@ -30,58 +31,59 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
 }
 
-/* Текст артына мөлдір қара фон */
-.text-container {
-    background: rgba(0, 0, 0, 0.7);
+/* Секциялар (барлық беттерде) */
+section {
     padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Текст артына мөлдір қара фон */
+    display: inline-block;
     border-radius: 10px;
     width: 80%;
-    margin: 50px auto;
-    text-align: center;
+    margin: 20px auto;
 }
 
-/* Контакты бетінің стилі */
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
-    text-align: center;
-}
-
-/* Контакты бетінің логосы */
-.contact-container img {
-    width: 150px;
-    height: auto;
-    animation: logoAnimation 2s infinite alternate;
-}
-
-/* Лого анимациясы */
-@keyframes logoAnimation {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
-}
-
-/* Галереядағы суреттер */
+/* Галерея */
 .gallery-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 50px;
+    flex-wrap: wrap;
+    gap: 15px; /* Суреттер арасындағы бос орын */
+    padding: 20px;
 }
 
 .gallery-container img {
-    width: 250px;
+    width: 300px;
     height: auto;
     border-radius: 10px;
-    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+    transition: transform 0.3s ease-in-out;
 }
 
 .gallery-container img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Үлкейіп тұрады */
+}
+
+/* Контакт бөлімі */
+.contact {
+    text-align: center;
+    padding: 40px;
+}
+
+.contact-info {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Қозғалыстағы логотип */
+.logo {
+    width: 150px;
+    margin-top: 20px;
+    animation: logoAnimation 2s infinite alternate;
+}
+
+/* Логотип анимациясы */
+@keyframes logoAnimation {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
 }
