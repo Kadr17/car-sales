@@ -1,6 +1,6 @@
-/* Барлық беттерге қара фон */
+/* Барлық беттер үшін негізгі стильдер */
 body {
-    background-image: url("images/background.jpg"); /* Артқы фон */
+    background-image: url("images/background.jpg"); /* Артқы фон суреті */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -10,13 +10,36 @@ body {
     padding: 0;
 }
 
-/* Тек текст артына мөлдір қара фон */
+/* Навигация */
+nav {
+    background: rgba(0, 0, 0, 0.8); /* Навигацияға мөлдір қара фон */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Текст артына мөлдір қара фон */
 .text-container {
     background: rgba(0, 0, 0, 0.7); /* Жартылай мөлдір қара фон */
     padding: 20px;
     border-radius: 10px;
     width: 80%;
-    margin: auto;
+    margin: 50px auto;
     text-align: center;
 }
 
@@ -30,14 +53,35 @@ body {
     text-align: center;
 }
 
+/* Контакты бетінің логосы */
 .contact-container img {
     width: 150px; /* Лого өлшемі */
     height: auto;
     animation: logoAnimation 2s infinite alternate; /* Логоға анимация */
 }
 
-/* Лого анимациясы */
+/* Лого анимациясы (үлкейіп-кішірейеді) */
 @keyframes logoAnimation {
     0% { transform: scale(1); }
     100% { transform: scale(1.1); }
+}
+
+/* Галереядағы суреттер */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.gallery-container img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
 }
