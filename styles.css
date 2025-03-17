@@ -1,6 +1,6 @@
 /* Барлық беттер үшін негізгі стильдер */
 body {
-    background-image: url("images/background.jpg"); /* Артқы фон суреті */
+    background-image: url("images/background.jpg"); /* Артқы фон */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -35,7 +35,7 @@ nav ul li a {
 
 /* Текст артына мөлдір қара фон */
 .text-container {
-    background: rgba(0, 0, 0, 0.7); /* Жартылай мөлдір қара фон */
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
     width: 80%;
@@ -55,12 +55,12 @@ nav ul li a {
 
 /* Контакты бетінің логосы */
 .contact-container img {
-    width: 150px; /* Лого өлшемі */
+    width: 150px;
     height: auto;
-    animation: logoAnimation 2s infinite alternate; /* Логоға анимация */
+    animation: logoAnimation 2s infinite alternate;
 }
 
-/* Лого анимациясы (үлкейіп-кішірейеді) */
+/* Лого анимациясы */
 @keyframes logoAnimation {
     0% { transform: scale(1); }
     100% { transform: scale(1.1); }
