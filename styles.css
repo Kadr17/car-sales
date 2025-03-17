@@ -1,83 +1,43 @@
-/* Жалпы стильдер */
+/* Барлық беттерге қара фон */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url("images/car-background.jpg"); /* Главная бетінің фоны */
+    background-image: url("images/background.jpg"); /* Артқы фон */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: white; /* Ақ түсті текст */
-}
-
-/* Шапка */
-header {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 15px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+/* Тек текст артына мөлдір қара фон */
+.text-container {
+    background: rgba(0, 0, 0, 0.7); /* Жартылай мөлдір қара фон */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Секциялар (главныйдан басқа беттер ортасында тұрады) */
-section {
+/* Контакты бетінің стилі */
+.contact-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 80vh; /* Экран ортасына қояды */
+    min-height: 80vh;
     text-align: center;
 }
 
-/* Галерея */
-.gallery-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 20px;
-}
-
-.gallery-container img {
-    width: 300px;
+.contact-container img {
+    width: 150px; /* Лого өлшемі */
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
+    animation: logoAnimation 2s infinite alternate; /* Логоға анимация */
 }
 
-.gallery-container img:hover {
-    transform: scale(1.1);
-}
-
-/* Контакт бетінің стилі */
-.contact {
-    text-align: center;
-    padding: 40px;
-}
-
-/* Логотипті анимациямен қозғалу */
-@keyframes pulse {
+/* Лого анимациясы */
+@keyframes logoAnimation {
     0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
-}
-
-.logo {
-    width: 150px;
-    margin-top: 20px;
-    animation: pulse 2s infinite ease-in-out; /* Пульсация анимациясы */
+    100% { transform: scale(1.1); }
 }
